@@ -1,0 +1,262 @@
+/* Final Project stylesheet */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #0b1220 0%, #000000 55%);
+  color: #e8e8e8;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #f59e0b;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(7, 12, 21, 0.96);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.18);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-list {
+  margin: 0;
+  padding: 16px 24px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.navbar-list a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #eef2ff;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.navbar-list a:hover {
+  color: #f59e0b;
+  transform: translateY(-1px);
+}
+
+.top-hero {
+  text-align: center;
+  padding: clamp(40px, 8vw, 80px) 24px;
+}
+
+.top-hero h1 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(48px, 9vw, 96px);
+  letter-spacing: 0.08em;
+  line-height: 1.05;
+  background: linear-gradient(120deg, #f8fafc 0%, #f59e0b 45%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video-sign {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 0;
+  padding: 12px 20px;
+  max-width: 680px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(59, 130, 246, 0.08));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+.video-sign span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f8fafc;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 18px 50px rgba(245, 158, 11, 0.18), 0 0 0 rgba(245, 158, 11, 0);
+  }
+  50% {
+    box-shadow: 0 24px 70px rgba(245, 158, 11, 0.28), 0 0 20px rgba(245, 158, 11, 0.14);
+  }
+}
+
+.hero-subtitle {
+  margin-top: 16px;
+  color: #d1d5db;
+  font-size: 18px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Lindan {
+  text-align: center;
+  grid-template-columns: 1fr;
+}
+
+.Lindan p {
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.LeeChongWei img,
+.ChenLong img,
+.PeterGade img,
+.TaufikHidayat img,
+.ViktorAxelsen img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.LeeChongWei,
+.ChenLong,
+.PeterGade,
+.TaufikHidayat,
+.ViktorAxelsen {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.LeeChongWei p,
+.ChenLong p,
+.PeterGade p,
+.TaufikHidayat p,
+.ViktorAxelsen p {
+  margin: 0;
+}
+
+
+
+
+.Lindanchampion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: clamp(32px, 5vw, 64px) 24px;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 35%),
+              linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(0, 0, 0, 0.95));
+  border-radius: 24px;
+  border: 1px solid rgba(245, 158, 11, 0.12);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.Lindanchampion-images,
+.Lindanchampion-bottom-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+.lindan-image {
+  width: 100%;
+  height: 240px; 
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.Lindanchampion-copy {
+  display: grid;
+  gap: 22px;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.Lindanchampion p {
+  margin: 0;
+  width: 100%;
+  line-height: 1.85;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.28px;
+  text-align: justify;
+  color: #e8e8e8;
+  padding: 24px 26px;
+  background: rgba(15, 23, 42, 0.72);
+  border-left: 4px solid #f59e0b;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.orange-divider {
+  width: 80%;
+  max-width: 700px;
+  height: 3px;
+  margin: 30px auto;
+  background: #f59e0b;
+  border: none;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .content-grid,
+  .LeeChongWei,
+  .ChenLong,
+  .PeterGade,
+  .TaufikHidayat,
+  .ViktorAxelsen {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar-list {
+    gap: 16px;
+    padding: 14px 16px;
+  }
+
+  .top-hero {
+    padding: clamp(28px, 10vw, 60px) 16px;
+  }
+}
+
+.leechongwei-top .lindan-image {
+  height: 380px; /* Adjust this height to whatever size looks best to you! */
+  object-fit: cover;
+}
