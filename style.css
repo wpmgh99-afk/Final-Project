@@ -1,5 +1,6 @@
-/* Final Project stylesheet */
-
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
 * {
   box-sizing: border-box;
 }
@@ -33,6 +34,9 @@ img {
   display: block;
 }
 
+/* ==========================================================================
+   2. NAVBAR
+   ========================================================================== */
 .navbar {
   position: sticky;
   top: 0;
@@ -40,6 +44,7 @@ img {
   background: rgba(7, 12, 21, 0.96);
   border-bottom: 1px solid rgba(245, 158, 11, 0.18);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
 }
 
 .navbar-list {
@@ -64,15 +69,18 @@ img {
   transform: translateY(-1px);
 }
 
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
 .top-hero {
   text-align: center;
-  padding: clamp(40px, 8vw, 80px) 24px;
+  padding: clamp(36px, 6vw, 64px) 24px;
 }
 
 .top-hero h1 {
   margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(48px, 9vw, 96px);
+  font-size: clamp(40px, 7vw, 80px);
   letter-spacing: 0.08em;
   line-height: 1.05;
   background: linear-gradient(120deg, #f8fafc 0%, #f59e0b 45%, #60a5fa 100%);
@@ -80,13 +88,22 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
+.hero-subtitle {
+  margin-top: 14px;
+  color: #d1d5db;
+  font-size: 17px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .video-sign {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 24px auto 0;
-  padding: 12px 20px;
-  max-width: 680px;
+  margin: 20px auto 0;
+  padding: 10px 18px;
+  max-width: 620px;
   border-radius: 999px;
   border: 1px solid rgba(245, 158, 11, 0.38);
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(59, 130, 246, 0.08));
@@ -95,9 +112,9 @@ img {
 }
 
 .video-sign span {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #f8fafc;
 }
@@ -111,148 +128,273 @@ img {
   }
 }
 
-.hero-subtitle {
-  margin-top: 16px;
-  color: #d1d5db;
-  font-size: 18px;
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.Lindan {
-  text-align: center;
-  grid-template-columns: 1fr;
-}
-
-.Lindan p {
-  max-width: 840px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.LeeChongWei img,
-.ChenLong img,
-.PeterGade img,
-.TaufikHidayat img,
-.ViktorAxelsen img {
-  width: 100%;
-  max-height: 340px;
-  object-fit: cover;
+/* ==========================================================================
+   4. BADMINTON.HTML PAGE STYLES
+   ========================================================================== */
+.content-container,
+.things {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+  align-items: center;
+  max-width: 920px;
+  margin: 0 auto 32px auto;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(245, 158, 11, 0.15);
   border-radius: 18px;
+  backdrop-filter: blur(8px);
 }
 
+.things {
+  grid-template-columns: 1fr 240px;
+}
+
+.badminton-image,
+.badminton-equipment-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.content-container p,
+.things p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #e8e8e8;
+}
+
+/* ==========================================================================
+   5. LEGENDS.HTML PAGE STYLES
+   ========================================================================== */
+.Lindan,
 .LeeChongWei,
 .ChenLong,
 .PeterGade,
 .TaufikHidayat,
 .ViktorAxelsen {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 40px;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
   align-items: center;
+  max-width: 920px;
+  margin: 0 auto 28px auto;
+  padding: 22px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
+.Lindan:hover,
+.LeeChongWei:hover,
+.ChenLong:hover,
+.PeterGade:hover,
+.TaufikHidayat:hover,
+.ViktorAxelsen:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.Lindan img,
+.LeeChongWei img,
+.ChenLong img,
+.PeterGade img,
+.TaufikHidayat img,
+.ViktorAxelsen img,
+.leechongwei-image,
+.chenlong-image,
+.petergade-image,
+.taufikhidayat-image,
+.viktoraxelsen-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.Lindan a:hover img,
+.LeeChongWei a:hover img,
+.ChenLong a:hover img,
+.PeterGade a:hover img,
+.TaufikHidayat a:hover img,
+.ViktorAxelsen a:hover img {
+  transform: scale(1.03);
+}
+
+.Lindan p,
 .LeeChongWei p,
 .ChenLong p,
 .PeterGade p,
 .TaufikHidayat p,
 .ViktorAxelsen p {
   margin: 0;
+  font-size: 15.5px;
+  line-height: 1.75;
+  text-align: justify;
 }
 
-
-
-
+/* ==========================================================================
+   6. INDIVIDUAL CHAMPION PAGES (LINDAN & LEE CHONG WEI LEGENDS)
+   ========================================================================== */
 .Lindanchampion {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  padding: clamp(32px, 5vw, 64px) 24px;
-  max-width: 980px;
-  margin: 0 auto;
+  gap: 28px;
+  padding: clamp(28px, 4vw, 56px) 20px;
+  max-width: 920px;
+  margin: 0 auto 50px auto;
   text-align: center;
   background: radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 35%),
               linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(0, 0, 0, 0.95));
-  border-radius: 24px;
+  border-radius: 20px;
   border: 1px solid rgba(245, 158, 11, 0.12);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 .Lindanchampion-images,
 .Lindanchampion-bottom-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
 }
-
 
 .lindan-image {
   width: 100%;
-  height: auto; 
+  height: 200px;
   object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 16px;
+  border-radius: 14px;
   border: 1px solid rgba(245, 158, 11, 0.2);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
-
 
 .Lindanchampion-copy {
   display: grid;
-  gap: 22px;
+  gap: 18px;
   width: 100%;
-  max-width: 920px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
 .Lindanchampion p {
   margin: 0;
   width: 100%;
-  line-height: 1.85;
-  font-size: 17px;
+  line-height: 1.8;
+  font-size: 16px;
   font-weight: 300;
-  letter-spacing: 0.28px;
+  letter-spacing: 0.25px;
   text-align: justify;
   color: #e8e8e8;
-  padding: 24px 26px;
+  padding: 20px 22px;
   background: rgba(15, 23, 42, 0.72);
   border-left: 4px solid #f59e0b;
-  border-radius: 14px;
+  border-radius: 12px;
   backdrop-filter: blur(8px);
 }
 
 .orange-divider {
   width: 80%;
-  max-width: 700px;
-  height: 3px;
-  margin: 30px auto;
-  background: #f59e0b;
+  max-width: 650px;
+  height: 2px;
+  margin: 24px auto;
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
   border: none;
-  border-radius: 2px;
 }
 
-@media (max-width: 900px) {
-  .content-grid,
+/* Sizing for top images on Lee Chong Wei page */
+.leechongwei-top {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.leechongwei-top .lindan-image {
+  height: 260px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (TABLETS & MOBILE)
+   ========================================================================== */
+@media (max-width: 850px) {
+  .content-container,
+  .things,
+  .Lindan,
   .LeeChongWei,
   .ChenLong,
   .PeterGade,
   .TaufikHidayat,
   .ViktorAxelsen {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .things {
+    grid-template-areas: "text" "image";
+  }
+
+  .things p {
+    grid-area: text;
+  }
+
+  .things img {
+    grid-area: image;
+  }
+
+  .content-container img,
+  .things img,
+  .Lindan img,
+  .LeeChongWei img,
+  .ChenLong img,
+  .PeterGade img,
+  .TaufikHidayat img,
+  .ViktorAxelsen img {
+    height: 220px;
+  }
+
+  .Lindan p,
+  .LeeChongWei p,
+  .ChenLong p,
+  .PeterGade p,
+  .TaufikHidayat p,
+  .ViktorAxelsen p {
+    text-align: left;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 600px) {
   .navbar-list {
-    gap: 16px;
-    padding: 14px 16px;
+    gap: 12px;
+    padding: 10px 14px;
+  }
+
+  .navbar-list a {
+    font-size: 14px;
   }
 
   .top-hero {
-    padding: clamp(28px, 10vw, 60px) 16px;
+    padding: clamp(24px, 8vw, 48px) 16px;
+  }
+
+  .Lindanchampion p {
+    text-align: left;
+    padding: 16px 18px;
+    font-size: 14.5px;
+  }
+
+  .leechongwei-top {
+    grid-template-columns: 1fr;
+  }
+
+  .leechongwei-top .lindan-image {
+    height: 200px;
   }
 }
-
