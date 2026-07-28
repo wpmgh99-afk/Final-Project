@@ -171,7 +171,7 @@ img {
 /* ==========================================================================
    5. LEGENDS.HTML PAGE STYLES
    ========================================================================== */
-.Lindan,
+Lindan,
 .LeeChongWei,
 .ChenLong,
 .PeterGade,
@@ -201,21 +201,17 @@ img {
   border-color: rgba(245, 158, 11, 0.4);
 }
 
+/* Forces ALL card images on Legends.html to be identical in size */
 .Lindan img,
 .LeeChongWei img,
 .ChenLong img,
 .PeterGade img,
 .TaufikHidayat img,
-.ViktorAxelsen img,
-.leechongwei-image,
-.chenlong-image,
-.petergade-image,
-.taufikhidayat-image,
-.viktoraxelsen-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
+.ViktorAxelsen img {
+  width: 100% !important;
+  height: 200px !important; /* Matches all other images perfectly */
+  object-fit: cover !important;
+  object-position: center !important;
   border-radius: 14px;
   border: 1px solid rgba(245, 158, 11, 0.2);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
@@ -242,7 +238,6 @@ img {
   line-height: 1.75;
   text-align: justify;
 }
-
 /* ==========================================================================
    6. INDIVIDUAL CHAMPION PAGES (LINDAN & LEE CHONG WEI LEGENDS)
    ========================================================================== */
