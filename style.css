@@ -201,7 +201,7 @@ img {
   border-color: rgba(245, 158, 11, 0.4);
 }
 
-/* Forces ALL card images on Legends.html to be identical in size */
+
 .Lindan img,
 .LeeChongWei img,
 .ChenLong img,
@@ -209,7 +209,7 @@ img {
 .TaufikHidayat img,
 .ViktorAxelsen img {
   width: 100% !important;
-  height: 200px !important; /* Matches all other images perfectly */
+  height: 200px !important; 
   object-fit: cover !important;
   object-position: center !important;
   border-radius: 14px;
@@ -307,7 +307,7 @@ img {
   border: none;
 }
 
-/* Sizing for top images on Lee Chong Wei page */
+
 .leechongwei-top {
   grid-template-columns: repeat(2, 1fr);
 }
