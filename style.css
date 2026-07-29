@@ -400,24 +400,31 @@ table {
     margin: auto;
     border-collapse: collapse;
     background: white;
+    color: #222; 
 }
 
 th {
-    background-color: Lightblue;
+    background-color: #1b5e20;
     color: white;
     padding: 12px;
+    font-size: 18px;
 }
 
 td {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     padding: 12px;
     text-align: center;
+    color: #111; 
 }
 
 tr:nth-child(even) {
-    background-color: #504f4f;
+    background-color: #f8f8f8;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
 }
 
 tr:hover {
-    background-color: #bababa;
+    background-color: #dcedc8;
 }
